@@ -45,11 +45,11 @@ const imageVariants = {
 };
 const sliderVariants = {
   initial: {
-    x: "70%",
+    x: "100%",
     backgroundColor: "transparent",
   },
   animate: {
-    x: "-20%",
+    x: "0%",
     transition: {
       repeat: Infinity,
       repeatType: "mirror",
@@ -70,11 +70,6 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
   };
   return (
     <div className="hero">
-      {/* <div className="background-video">
-        <video autoplay muted loop>
-          <source src={Video} type="video/mp4" />
-        </video>
-      </div> */}
       <NavBar
         refs={{
           storitveRef,
