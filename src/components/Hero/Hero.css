@@ -1,23 +1,21 @@
-
 .hero {
   position: relative;
   height: 100dvh;
-  overflow: hidden;/* 
+  overflow: hidden; /* 
   background: linear-gradient(180deg, #0c0c1d, #111132); */
-  scroll-snap-align: start; 
+  scroll-snap-align: start;
   font-family: var(--fontFamily-main);
 }
 .background-video {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh; 
+  height: 100vh;
   width: 100vw;
 }
-.background-video video{
+.background-video video {
   height: 100%;
   width: 100%;
-
 }
 .wrapper {
   max-width: 80%;
@@ -37,7 +35,7 @@
   text-align: center;
 }
 @media screen and (max-width: 1000px) {
-  .textContainer{
+  .textContainer {
     height: 50%;
     width: 100%;
     gap: 20px;
@@ -53,67 +51,90 @@
   font-size: 30px;
   color: rebeccapurple;
   letter-spacing: 10px;
+  text-align: left;
 }
 @media screen and (max-width: 1000px) {
-  .textContainer h2{
-    font-size: 1.5rem;
+  .textContainer h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 2rem;
   }
 }
 
 .textContainer h1 {
-  font-size: 2.5rem;;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 10px;
 }
 @media screen and (max-width: 1000px) {
-  .textContainer h1{
-    font-size: 2rem;
+  .textContainer h1 {
+    font-size: 1.5rem;
     margin-bottom: 10vh;
+    text-align: center;
+    padding: 0 2rem;
   }
 }
-.hero-button {
+.hero-button-wrapper {
   position: absolute;
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-button {
   background-color: transparent;
   border: none;
+  z-index: 2;
 }
-.hero-button i{
+.hero-button:hover {
+  cursor: pointer;
+}
+.hero-button i {
   color: white;
   font-size: 3rem;
 }
 .buttons {
-  button {
-    padding: 20px;
-    border: 1px solid white;
-    border-radius: 10px;
-    background-color: transparent;
-    color: white;
-    margin-right: 20px;
-    cursor: pointer;
-    font-weight: 300;
-  }
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+}
+.buttons button {
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+  font-weight: 300;
 }
 
 .imageContainer {
-height: 100%;
-width: 30%;
-position: absolute;
-top: 25%;
-right: 0;
+  height: 100%;
+  width: 30%;
+  position: absolute;
+  top: 25%;
+  right: 0;
 }
 
 @media screen and (max-width: 1000px) {
+  .buttons {
+    justify-content: center;
+  }
   .imageContainer {
     height: 50%;
     width: 100%;
     top: unset;
-    bottom: 5%;  
+    bottom: 5%;
   }
 }
-.compImg{
+.compImg {
   position: absolute;
   top: 0%;
-  right: 30% ;
+  right: 30%;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -123,14 +144,13 @@ right: 0;
   position: absolute;
   top: 0%;
   right: 10%;
-  clip-path: inset(0% 6% 0% 6% round 10%);
   width: auto;
   height: 60%;
   object-fit: cover;
 }
 @media screen and (max-width: 1000px) {
   .compImg {
-    left: -5%;  
+    left: -5%;
     top: 15%;
   }
   .phoneImg {
@@ -140,12 +160,12 @@ right: 0;
   }
 }
 .slidingTextContainer {
-position: absolute;
-top: 15%;
-white-space: nowrap;
-color: #ffffff09;
-width: 50%;
-font-weight: bold;
+  position: absolute;
+  top: 15%;
+  white-space: nowrap;
+  color: #ffffff09;
+  width: 50%;
+  font-weight: bold;
 }
 @media screen and (max-width: 1000px) {
   .slidingTextContainer {
@@ -153,8 +173,8 @@ font-weight: bold;
     top: 25%;
   }
 }
-.slidingTextContainer img{
+.slidingTextContainer img {
   height: 2.5rem;
   width: auto;
-  margin: 0 1rem;  
+  margin: 0 1rem;
 }

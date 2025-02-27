@@ -1,29 +1,32 @@
-import { useRef, forwardRef } from "react";
+import { useRef, useState, forwardRef } from "react";
 import "./Projekti.css";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import items from "./ProjektiData";
+import GalleryModal from "./GalerijaModal";
 
 const Single = ({ item }) => {
-  const ref = useRef(); // Internal ref for the image container
+  const [showGallery, setShowGallery] = useState(false);
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const handleClick = () => {
+    if (item.link) {
+      window.open(item.link, "_blank"); // Open link in a new tab
+    } else {
+      setShowGallery(true); // Open the gallery modal
+    }
+  };
 
   return (
     <section className="projekti-section">
       <div className="projekti-container">
         <div className="projekti-wrapper">
-          <div className="projekti-imageContainer" ref={ref}>
+          <div className="projekti-imageContainer">
             <img src={item.image} alt="" />
           </div>
-          <motion.div className="projekti-textContainer" style={{ y }}>
+          <motion.div className="projekti-textContainer">
             <h2>{item.title}</h2>
             <p>
-              Uporabljene tehnologije: <br />
+              Uporabljene tehnologije:
               <ul>
                 {item.data.map((tech, index) => (
                   <li key={index}>
@@ -31,19 +34,27 @@ const Single = ({ item }) => {
                       src={tech.icon}
                       alt={tech.name}
                       className="tech-icon"
-                    />{" "}
-                    {tech.name} {/* Render icon and text */}
+                    />
+                    {tech.name}
                   </li>
                 ))}
               </ul>
             </p>
-            <Link to={item.link}>
-              <button>Obišči stran</button>
-            </Link>
+            <button onClick={handleClick}>
+              {item.link ? "Obišči stran" : "Poglej galerijo"}
+            </button>
           </motion.div>
         </div>
         <div className="timeline-date">{item.date}</div>
       </div>
+
+      {/* Open GalleryModal if there's no link */}
+      {showGallery && (
+        <GalleryModal
+          media={item.media}
+          onClose={() => setShowGallery(false)}
+        />
+      )}
     </section>
   );
 };
@@ -69,6 +80,7 @@ const Projekti = forwardRef((props, ref) => {
       {items.map((item) => (
         <Single item={item} key={item.id} />
       ))}
+      <p>hello there</p>
     </div>
   );
 });

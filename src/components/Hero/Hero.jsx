@@ -1,7 +1,7 @@
 import "./Hero.css";
 import { color, motion } from "framer-motion";
 import CompPhoto from "../../images/comp_python.png";
-import PhonePhoto from "../../images/iphone_ums_hero.png";
+import PhonePhoto from "../../images/phone_ums.png";
 import arrowDown from "../../icons/arrow-square-down.png";
 import NavBar from "../NavBar/NavBar";
 import Video from "../../images/background.mp4";
@@ -9,11 +9,9 @@ import { Html, Css, ReactJs, Python } from "../../index";
 
 const textVariants = {
   initial: {
-    x: -500,
     opacity: 0,
   },
   animate: {
-    x: 0,
     opacity: 1,
     transition: {
       duration: 1,
@@ -131,14 +129,16 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
         <img className="compImg" src={CompPhoto} alt="" />
         <img className="phoneImg" src={PhonePhoto} alt="" />
       </motion.div>
-      <motion.button
-        className="hero-button"
-        variants={textVariants}
-        animate="scrollButton"
-        onClick={() => scrollToRef(storitveRef)}
-      >
-        <i class="fa-solid fa-circle-arrow-down"></i>
-      </motion.button>
+      <div className="hero-button-wrapper">
+        <motion.button
+          className="hero-button"
+          variants={textVariants}
+          animate="scrollButton"
+          onClick={() => scrollToRef(storitveRef)}
+        >
+          <i class="fa-solid fa-circle-arrow-down"></i>
+        </motion.button>
+      </div>
     </div>
   );
 };
