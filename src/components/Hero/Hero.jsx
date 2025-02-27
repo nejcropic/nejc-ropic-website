@@ -45,11 +45,11 @@ const imageVariants = {
 };
 const sliderVariants = {
   initial: {
-    x: "100%",
+    x: "70%",
     backgroundColor: "transparent",
   },
   animate: {
-    x: "0%",
+    x: "-20%",
     transition: {
       repeat: Infinity,
       repeatType: "mirror",
