@@ -80,7 +80,6 @@ const Projekti = forwardRef((props, ref) => {
       {items.map((item) => (
         <Single item={item} key={item.id} />
       ))}
-      <p>hello there</p>
     </div>
   );
 });

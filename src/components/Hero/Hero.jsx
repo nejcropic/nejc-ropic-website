@@ -98,7 +98,7 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
               variants={textVariants}
               onClick={() => scrollToRef(projektiRef)}
             >
-              Zadnji Projekti
+              Zadnji projekti
             </motion.button>
             <motion.button
               variants={textVariants}
