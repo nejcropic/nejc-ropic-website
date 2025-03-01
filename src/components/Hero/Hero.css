@@ -34,6 +34,13 @@
   position: absolute;
   text-align: center;
 }
+@media screen and (min-width: 1921px) {
+  .wrapper {
+    max-width: 1920px;
+    height: 100%;
+    margin: auto;
+  }
+}
 @media screen and (max-width: 1000px) {
   .textContainer {
     height: 50%;

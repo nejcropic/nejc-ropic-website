@@ -60,14 +60,15 @@ const sliderVariants = {
 };
 
 const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
-  const scrollToRef = (ref) => {
+  const scrollToRef = (ref, offset = 20) => {
     if (ref && ref.current) {
       window.scrollTo({
-        top: ref.current.offsetTop,
+        top: ref.current.offsetTop + offset,
         behavior: "smooth",
       });
     }
   };
+
   return (
     <div className="hero">
       <NavBar
@@ -103,6 +104,15 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
             </motion.button>
           </motion.div>
         </motion.div>
+        <motion.div
+          variants={imageVariants}
+          initial="initial"
+          animate="animate"
+          className="imageContainer"
+        >
+          <img className="compImg" src={CompPhoto} alt="" />
+          <img className="phoneImg" src={PhonePhoto} alt="" />
+        </motion.div>
       </div>
       <motion.div
         className="slidingTextContainer"
@@ -114,15 +124,6 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
         <img src={Python} alt="" />
         <img src={ReactJs} alt="" />
         <img src={Css} alt="" />
-      </motion.div>
-      <motion.div
-        variants={imageVariants}
-        initial="initial"
-        animate="animate"
-        className="imageContainer"
-      >
-        <img className="compImg" src={CompPhoto} alt="" />
-        <img className="phoneImg" src={PhonePhoto} alt="" />
       </motion.div>
       <div className="hero-button-wrapper">
         <motion.button

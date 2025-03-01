@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Services.css";
 import { categories } from "./ServicesConstants";
@@ -42,7 +42,7 @@ const overlayVariants = {
   },
 };
 
-const Services = () => {
+const Services = forwardRef((props, ref) => {
   const [selectedBox, setSelectedBox] = useState(null);
 
   const handleBoxClick = (index) => {
@@ -59,6 +59,7 @@ const Services = () => {
       variants={variants}
       initial="initial"
       animate="animate"
+      ref={ref}
     >
       <motion.div className="textContainer-services" variants={variants}>
         <p>
@@ -193,6 +194,6 @@ const Services = () => {
       </AnimatePresence>
     </motion.div>
   );
-};
+});
 
 export default Services;

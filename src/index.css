@@ -1,32 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Forum&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Forum&display=swap");
 
-
-
-
-:root{
+:root {
   /* colors */
-  --mainColor: #0c0c1d; 
+  --mainColor: #0c0c1d;
   --secondaryColor: orange;
   --textColor: #eee;
   --backgroundColor: rgb(220, 220, 220);
   --backgroundColorImage: rgb(230, 230, 230);
-  --cardColor: rgba(255,255,255,1);
-  --transparentBlackColor: rgba(0, 0, 0,0.55);
-  --transparentWhiteColor: rgba(255, 255, 255,0.55);
+  --cardColor: rgba(255, 255, 255, 1);
+  --transparentBlackColor: rgba(0, 0, 0, 0.55);
+  --transparentWhiteColor: rgba(255, 255, 255, 0.55);
   --white: hsla(0, 0%, 100%, 1);
   --black: hsla(0, 0%, 0%, 1);
   --gray: gray;
   /* fonts */
-  --fontFamily-forum: 'Forum', cursive;
-  --fontFamily-dm_sans: 'DM Sans', sans-serif;
-  --fontFamily-main: 'Montserrat', sans-serif;
+  --fontFamily-forum: "Forum", cursive;
+  --fontFamily-dm_sans: "DM Sans", sans-serif;
+  --fontFamily-main: "Montserrat", sans-serif;
   /* font size */
   --fontSizePc: 2rem;
   --fontSizePhone: 1.5rem;
   --lineRadius: 15px;
   --phonewidth: 100%;
   --compwidth: 100%;
-
 }
 
 html {
@@ -34,9 +30,9 @@ html {
   scroll-behavior: smooth;
 }
 
-*{
+* {
   padding: 0;
-  margin: 0; 
+  margin: 0;
   box-sizing: border-box;
   font-family: var(--fontFamily-main);
 }
@@ -45,7 +41,7 @@ html {
   width: 0;
   height: 8px;
   background-color: var(--mainColor);
-  color:  var(--backgroundColor);
+  color: var(--backgroundColor);
 }
 *::-webkit-scrollbar-thumb {
   width: 4px;
