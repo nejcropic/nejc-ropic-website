@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1e285dde.css",
-    "main.js": "/static/js/main.8943682a.js",
+    "main.css": "/static/css/main.df0b7f91.css",
+    "main.js": "/static/js/main.095affe5.js",
     "static/media/diplomska_video1.mp4": "/static/media/diplomska_video1.e98e9caf28c7cc002bde.mp4",
     "static/media/background.mp4": "/static/media/background.fd49493f0edbf1d9a449.mp4",
     "static/media/phone_toplar.png": "/static/media/phone_toplar.5f9e9f4df5fe75e6376d.png",
@@ -33,11 +33,11 @@
     "static/media/html.png": "/static/media/html.6e930594286d8afe4c79.png",
     "static/media/linkedin.png": "/static/media/linkedin.f249b38224ca41a0b909.png",
     "index.html": "/index.html",
-    "main.1e285dde.css.map": "/static/css/main.1e285dde.css.map",
-    "main.8943682a.js.map": "/static/js/main.8943682a.js.map"
+    "main.df0b7f91.css.map": "/static/css/main.df0b7f91.css.map",
+    "main.095affe5.js.map": "/static/js/main.095affe5.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e285dde.css",
-    "static/js/main.8943682a.js"
+    "static/css/main.df0b7f91.css",
+    "static/js/main.095affe5.js"
   ]
 }
