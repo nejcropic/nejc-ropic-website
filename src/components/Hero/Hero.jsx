@@ -1,5 +1,5 @@
 import "./Hero.css";
-import { color, motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import CompPhoto from "../../images/comp_python.png";
 import PhonePhoto from "../../images/phone_ums.png";
 import arrowDown from "../../icons/arrow-square-down.png";
@@ -8,54 +8,34 @@ import Video from "../../images/background.mp4";
 import { Html, Css, ReactJs, Python } from "../../index";
 
 const textVariants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 1, staggerChildren: 0.1 } },
   scrollButton: {
-    opacity: [0, 1, 0], // Add keyframes for opacity to make it "blink"
-    y: [0, 10, 0], // Add keyframes for up-down motion
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-      repeatType: "loop", // Specify repeatType to loop
-    },
+    opacity: [0, 1, 0],
+    y: [0, 10, 0],
+    transition: { duration: 2, repeat: Infinity, repeatType: "loop" },
   },
 };
 
 const imageVariants = {
-  initial: {
-    x: 500,
-    opacity: 0,
-  },
+  initial: { x: 500, opacity: 0 },
   animate: {
     x: 0,
     opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
+    transition: { duration: 1, staggerChildren: 0.1 },
   },
 };
+
 const sliderVariants = {
-  initial: {
-    x: "70%",
-    backgroundColor: "transparent",
-  },
+  initial: { x: "-35%" },
   animate: {
-    x: "-20%",
+    x: "-65%",
     transition: {
       repeat: Infinity,
-      repeatType: "mirror",
-      duration: 10,
+      repeatType: "reverse",
+      duration: 6,
+      ease: "easeInOut",
     },
-    backgroundColor: "transparent",
   },
 };
 
@@ -69,15 +49,17 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
     }
   };
 
+  // Scroll-based Background Animation
+  const { scrollYProgress } = useScroll();
+  const yTransform = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+
   return (
     <div className="hero">
-      <NavBar
-        refs={{
-          storitveRef,
-          projektiRef,
-          kontaktRef,
-        }}
-      />
+      {/* Scroll-sensitive background */}
+      <motion.div className="scroll-bg" style={{ y: yTransform }} />
+
+      <NavBar refs={{ storitveRef, projektiRef, kontaktRef }} />
+
       <div className="wrapper">
         <motion.div
           className="textContainer"
@@ -104,6 +86,7 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
             </motion.button>
           </motion.div>
         </motion.div>
+
         <motion.div
           variants={imageVariants}
           initial="initial"
@@ -114,6 +97,7 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
           <img loading="lazy" className="phoneImg" src={PhonePhoto} alt="" />
         </motion.div>
       </div>
+
       <motion.div
         className="slidingTextContainer"
         variants={sliderVariants}
@@ -125,6 +109,7 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
         <img src={ReactJs} alt="" />
         <img src={Css} alt="" />
       </motion.div>
+
       <div className="hero-button-wrapper">
         <motion.button
           className="hero-button"
@@ -132,7 +117,7 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
           animate="scrollButton"
           onClick={() => scrollToRef(storitveRef)}
         >
-          <i class="fa-solid fa-circle-arrow-down"></i>
+          <i className="fa-solid fa-circle-arrow-down"></i>
         </motion.button>
       </div>
     </div>

@@ -17,6 +17,17 @@
   height: 100%;
   width: 100%;
 }
+
+/* Scroll-sensitive Background */
+.scroll-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 200vh; /* Makes the background larger to create parallax effect */
+  background: url("../../images/background.mp4") center / cover no-repeat;
+  z-index: -1; /* Ensures it stays in the background */
+}
 .wrapper {
   max-width: 80%;
   height: 100%;
@@ -175,19 +186,32 @@
 .slidingTextContainer {
   position: absolute;
   top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
   white-space: nowrap;
   color: #ffffff09;
-  width: 50%;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  max-width: 1920px;
+}
+
+.slidingTextContainer img {
+  height: 3rem;
+  width: auto;
+  align-items: center;
+  padding: 0 1rem;
 }
 @media screen and (max-width: 1000px) {
   .slidingTextContainer {
     font-size: 10vh;
-    top: 25%;
+    top: 30%;
+    width: 100%;
   }
-}
-.slidingTextContainer img {
-  height: 2.5rem;
-  width: auto;
-  margin: 0 1rem;
+  .slidingTextContainer img {
+    height: 2.5rem;
+    padding: 0 0.5rem;
+  }
 }

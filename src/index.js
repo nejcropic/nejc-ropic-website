@@ -3,17 +3,20 @@ import App from "./App";
 import { createRoot } from "react-dom/client";
 import { HashRouter } from "react-router-dom";
 
-// Import Images
+// Import Images - Lazy loaded later
 import Logo from "./images/logo.png"; // Critical image (preload)
-import JozePhone from "./images/joze_phone.png"; // Lazy loaded later
-import ToplarPhone from "./images/toplar_phone.png"; // Lazy loaded later
-import UMSPhone from "./images/ums_phone.png"; // Lazy loaded later
-import DvojcekPhone from "./images/joze_phone.png"; // Lazy loaded later
-/* import JozeComp from "./images/joze_comp.png"; // Lazy loaded later
-import ToplarComp from "./images/toplar_comp.png"; // Lazy loaded later
-import UMSComp from "./images/ums_comp.png"; // Lazy loaded later
-import DvojcekComp from "./images/dvojcek_comp.png"; // Lazy loaded later
- */
+import JozePhone from "./images/joze_phone.png";
+import ToplarPhone from "./images/toplar_phone.png";
+import UMSPhone from "./images/ums_phone.png";
+import DvojcekPhone from "./images/joze_phone.png";
+
+// Import Gallery - Lazy loaded later
+import Diplomska1 from "./images/diplomska_1.jpg";
+import Diplomska2 from "./images/diplomska_2.jpg";
+import Diplomska3 from "./images/diplomska_3.jpg";
+import Diplomska4 from "./images/diplomska_4.jpg";
+import DiplomskaVideo1 from "./images/diplomska_video1.mp4";
+
 // Import Icons
 import Html from "./icons/html.png";
 import Css from "./icons/social.png";
@@ -36,10 +39,11 @@ const lazyImages = [
   ToplarPhone,
   UMSPhone,
   DvojcekPhone,
-  /* JozeComp,
-  ToplarComp,
-  UMSComp,
-  DvojcekComp, */
+  Diplomska1,
+  Diplomska2,
+  Diplomska3,
+  Diplomska4,
+  DiplomskaVideo1,
   Html,
   Css,
   ReactJs,
@@ -59,10 +63,11 @@ export {
   ToplarPhone,
   UMSPhone,
   DvojcekPhone,
-  /* JozeComp,
-  ToplarComp,
-  UMSComp,
-  DvojcekComp, */
+  Diplomska1,
+  Diplomska2,
+  Diplomska3,
+  Diplomska4,
+  DiplomskaVideo1,
   Html,
   Css,
   ReactJs,
