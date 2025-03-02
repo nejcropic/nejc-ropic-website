@@ -1,17 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.c1ad646c.css",
-    "main.js": "/static/js/main.a6727de8.js",
+    "main.css": "/static/css/main.1e285dde.css",
+    "main.js": "/static/js/main.8943682a.js",
     "static/media/diplomska_video1.mp4": "/static/media/diplomska_video1.e98e9caf28c7cc002bde.mp4",
     "static/media/background.mp4": "/static/media/background.fd49493f0edbf1d9a449.mp4",
-    "static/media/toplar_comp.png": "/static/media/toplar_comp.06e362cca320cca2d0dd.png",
     "static/media/phone_toplar.png": "/static/media/phone_toplar.5f9e9f4df5fe75e6376d.png",
     "static/media/phone_joze.png": "/static/media/phone_joze.c4ddcda81d19e397c862.png",
     "static/media/diplomska_4.jpg": "/static/media/diplomska_4.a43a912cf63a5c318928.jpg",
     "static/media/diplomska_2.jpg": "/static/media/diplomska_2.a87954698a5009151d71.jpg",
     "static/media/diplomska_3.jpg": "/static/media/diplomska_3.60a67e84965698954e59.jpg",
-    "static/media/joze_comp.png": "/static/media/joze_comp.e0bdd870bfc1e2305c87.png",
-    "static/media/dvojcek_comp.png": "/static/media/dvojcek_comp.5b96ce3c7a9b58ff7548.png",
     "static/media/phone_dvojcek.png": "/static/media/phone_dvojcek.2b445316136be8135e08.png",
     "static/media/ums_comp.png": "/static/media/ums_comp.8426bd8a117432f2ad82.png",
     "static/media/phone_ums.png": "/static/media/phone_ums.9daf06b6364af653f7ee.png",
@@ -36,11 +33,11 @@
     "static/media/html.png": "/static/media/html.6e930594286d8afe4c79.png",
     "static/media/linkedin.png": "/static/media/linkedin.f249b38224ca41a0b909.png",
     "index.html": "/index.html",
-    "main.c1ad646c.css.map": "/static/css/main.c1ad646c.css.map",
-    "main.a6727de8.js.map": "/static/js/main.a6727de8.js.map"
+    "main.1e285dde.css.map": "/static/css/main.1e285dde.css.map",
+    "main.8943682a.js.map": "/static/js/main.8943682a.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1ad646c.css",
-    "static/js/main.a6727de8.js"
+    "static/css/main.1e285dde.css",
+    "static/js/main.8943682a.js"
   ]
 }
