@@ -110,8 +110,8 @@ const Hero = ({ storitveRef, projektiRef, kontaktRef }) => {
           animate="animate"
           className="imageContainer"
         >
-          <img className="compImg" src={CompPhoto} alt="" />
-          <img className="phoneImg" src={PhonePhoto} alt="" />
+          <img loading="lazy" className="compImg" src={CompPhoto} alt="" />
+          <img loading="lazy" className="phoneImg" src={PhonePhoto} alt="" />
         </motion.div>
       </div>
       <motion.div
