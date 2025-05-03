@@ -11,10 +11,10 @@ import UMSPhone from "./images/ums_phone.png";
 import DvojcekPhone from "./images/joze_phone.png";
 
 // Import Gallery - Lazy loaded later
-import Diplomska1 from "./images/diplomska_1.jpg";
-import Diplomska2 from "./images/diplomska_2.jpg";
-import Diplomska3 from "./images/diplomska_3.jpg";
-import Diplomska4 from "./images/diplomska_4.jpg";
+import Modul_main from "./images/ohisje_diag.png";
+import Modul_montaza from "./images/sestava.png";
+import Modul_zgoraj from "./images/ohisje_zgoraj.png";
+import Uporabniski_vmesnik from "./images/up_vmesnik.png";
 import DiplomskaVideo1 from "./images/diplomska_video1.mp4";
 
 // Import Icons
@@ -39,10 +39,9 @@ const lazyImages = [
   ToplarPhone,
   UMSPhone,
   DvojcekPhone,
-  Diplomska1,
-  Diplomska2,
-  Diplomska3,
-  Diplomska4,
+  Modul_main,
+  Modul_montaza,
+  Modul_zgoraj,
   DiplomskaVideo1,
   Html,
   Css,
@@ -63,10 +62,9 @@ export {
   ToplarPhone,
   UMSPhone,
   DvojcekPhone,
-  Diplomska1,
-  Diplomska2,
-  Diplomska3,
-  Diplomska4,
+  Modul_main,
+  Modul_montaza,
+  Modul_zgoraj,
   DiplomskaVideo1,
   Html,
   Css,
