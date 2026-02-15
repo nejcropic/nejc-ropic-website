@@ -1,0 +1,118 @@
+.contact {
+  padding: 160px 0;
+  position: relative;
+}
+
+.inner {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+}
+
+.left h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 20px;
+}
+
+.left p {
+  opacity: 0.7;
+}
+
+/* FORM */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.floating {
+  position: relative;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 18px 14px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+label {
+  position: absolute;
+  left: 14px;
+  top: 18px;
+  font-size: 0.9rem;
+  opacity: 0.5;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+input:focus + label,
+textarea:focus + label,
+.active {
+  top: -8px;
+  left: 10px;
+  font-size: 0.75rem;
+  background: var(--bg);
+  padding: 0 6px;
+  opacity: 1;
+}
+
+button {
+  padding: 14px;
+  border-radius: 50px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px var(--accent-glow);
+}
+
+/* OVERLAY */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+}
+
+.overlayBox {
+  background: var(--bg);
+  padding: 60px;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.overlayBox h3 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+}
+
+.overlayBox p {
+  opacity: 0.7;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}

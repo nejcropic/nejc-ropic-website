@@ -1,0 +1,103 @@
+.footer {
+  padding: 100px 0 40px;
+  background: transparent;
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+
+.inner {
+  width: min(1400px, 90%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.left h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.left p {
+  opacity: 0.6;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-end;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.links button {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.95rem;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.links button:hover {
+  opacity: 0.7;
+}
+
+.links button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.links button:hover::after {
+  width: 100%;
+}
+
+.contact a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.contact a:hover {
+  opacity: 0.7;
+}
+
+.bottom {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.5;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .right {
+    align-items: flex-start;
+  }
+
+  .links {
+    flex-wrap: wrap;
+  }
+}

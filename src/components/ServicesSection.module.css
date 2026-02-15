@@ -1,0 +1,143 @@
+.services {
+  position: relative;
+  padding: 160px 0;
+  background: transparent; /* pomembno zaradi global backgrounda */
+}
+
+.inner {
+  width: min(1400px, 90%);
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.header p {
+  opacity: 0.6;
+  margin-top: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+
+.card {
+  position: relative;
+  padding: 40px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+}
+
+.cardGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 0%,
+    var(--accent-glow),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+}
+
+.card h4 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.description {
+  opacity: 0.7;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 18px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* CTA */
+
+.cta {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.cta h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  opacity: 0.7;
+  margin-bottom: 24px;
+}
+
+.cta button {
+  padding: 14px 32px;
+  border-radius: 50px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cta button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px var(--accent-glow);
+}
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 30px;
+  }
+
+  .cta {
+    margin-top: 80px;
+  }
+}

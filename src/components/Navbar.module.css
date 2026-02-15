@@ -1,0 +1,152 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  transition:
+    background 0.4s ease,
+    backdrop-filter 0.4s ease;
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+}
+
+[data-theme="dark"] .scrolled {
+  background: rgba(15, 17, 21, 0.6);
+}
+
+.inner {
+  width: min(1400px, 90%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  gap: 40px;
+  position: relative;
+}
+
+.link {
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  opacity: 0.7;
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s ease;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.active {
+  opacity: 1;
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+}
+
+/* MOBILE PANEL */
+.mobilePanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  z-index: 999;
+}
+
+.mobileLink {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.mobileOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  z-index: 998;
+}
+
+.mobilePanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background: var(--bg);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileLinksWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+}
+
+.mobileLink {
+  font-size: 2.2rem;
+  font-family: "Playfair Display", serif;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
