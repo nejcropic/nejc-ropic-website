@@ -15,6 +15,7 @@ export default function App() {
   return (
     <>
       <GlobalBackground />
+
       <Navbar
         sections={{
           homeRef,
@@ -35,13 +36,20 @@ export default function App() {
       <section ref={projektiRef}>
         <ProjectsSection />
       </section>
+
       <section ref={storitveRef}>
-        <ServicesSection />
+        <ServicesSection kontaktRef={kontaktRef} />
       </section>
+
       <section ref={kontaktRef}>
         <ContactSection />
       </section>
-      <Footer />
+
+      <Footer
+        projektiRef={projektiRef}
+        storitveRef={storitveRef}
+        kontaktRef={kontaktRef}
+      />
     </>
   );
 }

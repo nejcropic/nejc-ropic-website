@@ -90,7 +90,7 @@ export default function ServicesSection({ kontaktRef }: Props) {
           <p>
             Poveživa znanje programiranja in elektrotehnike v praktično rešitev.
           </p>
-          <button onClick={scrollToContact}>Kontaktirajva</button>
+          <button onClick={scrollToContact}>Kontakt</button>
         </motion.div>
       </div>
     </section>
