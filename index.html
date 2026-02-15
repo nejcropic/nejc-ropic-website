@@ -21,8 +21,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
     <!-- Preconnect (samo enkrat!) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,6 +30,29 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <!-- Google Analytics (GA4) -->
+    <script type="module">
+      const GA_ID = import.meta.env.VITE_GA_ID;
+      const isProd = import.meta.env.PROD;
+
+      if (GA_ID && isProd) {
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          window.dataLayer.push(arguments);
+        }
+        window.gtag = gtag;
+
+        gtag("js", new Date());
+        gtag("config", GA_ID, {
+          send_page_view: false,
+        });
+      }
+    </script>
 
     <!-- Open Graph -->
     <meta property="og:title" content="Nejc Ropič" />

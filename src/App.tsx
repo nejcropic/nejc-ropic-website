@@ -1,4 +1,5 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ProjectsSection from "./components/ProjectsSection";
@@ -12,6 +13,7 @@ export default function App() {
   const storitveRef = useRef<HTMLElement>(null);
   const kontaktRef = useRef<HTMLElement>(null);
 
+  useGoogleAnalytics();
   return (
     <>
       <GlobalBackground />
@@ -56,4 +58,18 @@ export default function App() {
 
 function GlobalBackground() {
   return <div className="global-bg" />;
+}
+
+export function useGoogleAnalytics() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const GA_ID = import.meta.env.VITE_GA_ID;
+
+    if (window.gtag && GA_ID) {
+      window.gtag("config", GA_ID, {
+        page_path: location.pathname + location.search,
+      });
+    }
+  }, [location]);
 }
