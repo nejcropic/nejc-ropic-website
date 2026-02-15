@@ -4,9 +4,6 @@ import styles from "./Hero.module.css";
 
 import CompPhoto from "../assets/comp_python.png";
 import PhonePhoto from "../assets/phone_ums.png";
-import Html from "../icons/html.png";
-import ReactJs from "../icons/atom.png";
-import Python from "../icons/python.png";
 
 type Props = {
   storitveRef: React.RefObject<HTMLElement>;
